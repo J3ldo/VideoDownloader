@@ -1,4 +1,6 @@
 from pytube import YouTube
-vid = YouTube("https://www.youtube.com/watch?v=XuDxt0WrG2I")
+vidurl = input("Video url: ")
+vid = YouTube(vidurl)
 vid1 = vid.streams.get_highest_resolution()
 vid1.download()
+input("Succesfully downloaded video")
